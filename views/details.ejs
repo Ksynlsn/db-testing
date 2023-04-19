@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DB Testing</title>
+  </head>
+  <body>
+    <h1>Deatils Page!</h1>
+    <h1>Thank you for asking about <%= item.name %> </h1>
+    
+<ul>
+  <% if (item) { %>
+  <li> <%= item.name %> </li>
+  <li> <%= item.price %> </li>
+  <li> <%= item.color %> </li>
+  <li> <%= item.locations.join(", ") %> </li>
+
+<% } %>
+</ul>
+<% if (item.inStock == true) { %>
+  <p> <%= item.name %> is available!</p>
+<% } else { %>
+  <p> <%= item.name %> is not available. </p>
+<% } %>
+
+
+<img src="<%= path %>">
+
+
+   
+
+  </body>
+</html>
