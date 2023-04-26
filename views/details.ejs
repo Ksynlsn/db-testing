@@ -7,13 +7,13 @@
     <title>DB Testing</title>
   </head>
   <body>
-    <h1>Deatils Page!</h1>
+    <h1>Details Page!</h1>
     <h1>Thank you for asking about <%= item.name %> </h1>
     
 <ul>
   <% if (item) { %>
   <li> <%= item.name %> </li>
-  <li> <%= item.price %> </li>
+  <li> $<%= item.price.toFixed(2) %> </li>
   <li> <%= item.color %> </li>
   <li> <%= item.locations.join(", ") %> </li>
 
@@ -27,9 +27,6 @@
 
 
 <img src="<%= path %>">
-
-
-   
 
   </body>
 </html>

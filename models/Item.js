@@ -18,11 +18,15 @@ mongoose.connection.on('open', () => {
 // define data model as JSON key/value pairs
 // values indicate the data type of each key
 const itemSchema = new Schema({
- name: { type: String, required: true },
- price: Number,
- color: String,
- locations: Array,
- inStock: Boolean
-});
+    name: { type: String, required: true },
+    price: { type: Number, required: true },
+    color: { type: String, required: false },
+    locations: { type: Array, required: false },
+    inStock: { type: Boolean, required: true },
+  },
+    {
+    versionKey: false
+    }
+);
 
 export const Item = mongoose.model('Item', itemSchema);
